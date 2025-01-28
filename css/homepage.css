@@ -1,28 +1,120 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
 }
 
-#header{
-    background-color:#E2E6D8;
-    width: 100%;
+.header {
+    background-color: #E2E6D8;
     height: 10%;
-}
-#main{
-    background-color: #FAFEEF;
-    width: 100%;
-    height: 70%;
-}
-h1{
     text-align: center;
-    padding-top:10px;
-    
+    padding-top: 15px;
 }
-#footer{
-    position: absolute; 
-    bottom: 0;
+
+.main {
+    background-color: #FAFEEF;
+    height: 75%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.intro{
+    font-size: 50px;
+    font-weight: 200;
+    padding: 50px;
+    margin-top: 40px;
+}
+#signUpForm{
+    padding: 3rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#signUpForm input {
     width: 100%;
-    height: 20%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#signUpForm button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#signUpForm p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-hidden{
+    display: none;
+}
+
+
+#signInForm{
+    padding: 3rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#signInForm input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#signInForm button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#signInForm p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.footer {
     background-color: #353302;
+    height: 15%;
+    text-align: center;
 }

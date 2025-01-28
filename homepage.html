@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Planner</title>
-    <link rel="stylesheet" href="css/homepage.css">
-</head>
-<body>
-    <div id="container">
-        <div id="header">
-            <h1>Weekly Meal Planner</h1>
-        </div>
-        <div id="main"></div>
-        <div id="footer"></div>
-     </div>
-</body>
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+  <body>
+    <div class="header">
+        <h1>Meal Planner</h1>
+    </div>
+
+    <div class="main">
+        <div class="intro">Let's plan your weekly meal</div>
+       
+            <form  id="signUpForm">
+                <input type="text" id="name" name="name" placeholder=" Name" required>
+
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span id="password-error" style="color: red;"></span><br><br>
+
+    
+                <button type="submit" id="signUpBtn" >Sign Up</button>
+                <p>Already have an account? <a id="linkLogin">Sign In</a></p> 
+            </form>
+        
+            <form class="form-hidden" id="signInForm">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <span id="password-error" style="color: red;"></span><br><br>
+
+  
+              <button type="submit" id="signUpBtn" >Sign In</button>
+              <p>Don't have an account? <a  id="linkCreateAccount">Sign Up</a></p> 
+          </form>
+      
+    </div>
+
+    <div class="footer">
+        <p>Footer Section</p>
+    </div>
+
+    <script src="js/homepage.js"></script>
+  </body>
 </html>
