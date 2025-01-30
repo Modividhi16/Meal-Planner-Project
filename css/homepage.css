@@ -1,187 +1,157 @@
 * {
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box; */
-  font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
+html, body {
+    height: 100%;
 }
 
-.header,
-h1 {
-  background-color: #e2e6d8;
-  height: 10%;
-  text-align: center;
-  padding: 15px;
+.header {
+    background-color: #E2E6D8;
+    height: 10%;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .main {
-  background-color: #fafeef;
-  height: 75%;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
+    background-color: #FAFEEF;
+    height: 75%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+
 }
 
-.intro {
-  font-size: 50px;
-  font-weight: 200;
-  padding: 50px;
-  margin-top: 40px;
+.intro{
+    font-size: 50px;
+    font-weight: 200;
+    padding: 50px;
+    margin-top: 40px;
 }
-#signUpForm {
-  padding: 3rem;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  max-width: 400px;
-  margin: auto;
+#signUpForm{
+    padding: 3rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
 }
 
 #signUpForm input {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 #signUpForm button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#signUpForm p {
-  margin-top: 5px;
-  text-align: center;
+#signUpForm p{
+    margin-top: 5px;
+    text-align: center;
 }
 
-.form-hidden {
-  display: none;
+.form-hidden{
+    display: none;
 }
 
-#signInForm {
-  padding: 3rem;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  max-width: 400px;
-  margin: auto;
+
+#signInForm{
+    padding: 3rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
 }
 
 #signInForm input {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 #signInForm button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#signInForm p {
-  margin-top: 5px;
-  text-align: center;
+#signInForm p{
+    margin-top: 5px;
+    text-align: center;
 }
 
-a {
-  text-decoration: none;
+
+a{
+    text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+a:hover{
+    text-decoration: underline;
 }
+
+/* meal-planner page css */
 
 .container {
-  display: flex;
-}
+    display: flex;
+  }
+  
+  #secondContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #E5E3DC;
+    width: 25%;
+    height: 300px;
+    margin: 10px;
+    /* padding: 5px; */
+  }
 
-#secondContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  display: inline-block;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 4px;
-  background-color: #E5E3DC;
-  width: 25%;
-  height: 300px;
-  margin: 10px;
-  /* padding: 5px; */
-}
-
-/* .dropbtn {
-  color: #E5E3DC;
-  background-color: #657B6D;
-  text-align: center;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin: 10px;
-  width: 75%;
-} */
-
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-}  */
-
-/* .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
-} */
-
-/* .dropdown:hover .dropdown-content {
-  display: block;
-}  */
-
-.form-select {
-  color: #E5E3DC;
-  background-color: #657B6D;
-  text-align: center;
-  color: white;
-  padding: 15px;
-  font-size: 16px;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin: 10px;
-  width: 75%;
-}
+  .form-select {
+    color: #E5E3DC;
+    background-color: #657B6D;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+    width: 75%;
+  }
 
 .footer {
-  background-color: #353302;
-  height: 15%;
-  text-align: center;
+    background-color: #353302;
+    height: 15%;
+    text-align: center;
 }
