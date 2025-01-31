@@ -117,6 +117,12 @@ a:hover{
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #firstContainer{
+    margin-top: 20px;
   }
   
   #secondContainer {
@@ -131,8 +137,8 @@ a:hover{
     border: 1px solid black;
     border-radius: 4px;
     background-color: #E5E3DC;
-    width: 25%;
-    height: 300px;
+    width: 20%;
+    height: 270px;
     margin: 10px;
     /* padding: 5px; */
   }
