@@ -10,7 +10,7 @@
   <body>
     <div class="mealPlaner">
         <header class="header">
-          <h1>Meal Planner</h1>
+          <h1>Weekly Meal Planner</h1>
         <div class="meals-dropdown"> 
           <button class="dropbtn" onclick="getMealDropdown()">Add Meals</button>
           <form id="addMealsForm" class="dropdown-content" >
@@ -21,7 +21,7 @@
                 <option value="dinner">Dinner</option>
             </select>
             <input type="text" placeholder="Enter meal" class="input">
-            <div><button id="addMealBtn">Add</button></div>
+            <div><button id="addMealBtn" type="button" onclick="getValue()">Add</button></div>
           </form>
         </div>    
         </header>
