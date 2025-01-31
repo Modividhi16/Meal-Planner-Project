@@ -26,3 +26,21 @@ const getMeals = (items) => {
     }
   };
   getMeals(meals);
+
+function getMealDropdown(){
+    document.getElementById("addMealsForm").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  // Close the dropdown if the clicked target is not the button or the dropdown itself
+  if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}

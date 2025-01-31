@@ -8,10 +8,23 @@
   </head>
 
   <body>
-    <header class="header">
-      <h1>Meal Planner</h1>
-    </header>
-
+    <div class="mealPlaner">
+        <header class="header">
+          <h1>Meal Planner</h1>
+        <div class="meals-dropdown"> 
+          <button class="dropbtn" onclick="getMealDropdown()">Add Meals</button>
+          <form id="addMealsForm" class="dropdown-content" >
+            <select name="meal_type" id="meal_options">
+                <option selected="selected" value="mealType">Select Meal Type</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <input type="text" placeholder="Enter meal" class="input">
+            <div><button id="addMealBtn">Add</button></div>
+          </form>
+        </div>    
+        </header>
     <main>
       <div id="firstContainer" class="container">
         <div class="card">
@@ -116,7 +129,9 @@
           </div>
         </div>
       </div>
+
     </main>
+    </div> 
 
     <script src="js/meals.js"></script>
     <script src="js/meal_planner.js"></script>
