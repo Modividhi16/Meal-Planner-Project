@@ -69,3 +69,9 @@ window.onclick = function (event) {
       dropdown.classList.remove("show");
   }
 };
+
+function storeMeal () {
+  const inputValue = document.getElementById("breakfast_monday").value;
+  localStorage.setItem("breakfast_monday", inputValue);
+  console.log(inputValue);
+}
