@@ -9,31 +9,38 @@ html, body {
 }
 
 .header {
-    background-color: #E2E6D8;
+    background-color:#58ab5b;
     height: 10%;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
+    color: white;
+    font-family: Bradley Hand, cursive	;
 }
 .main {
-    background-color: #FAFEEF;
-    height: 75%;
+    /* background-color: #FAFEEF; */
+    background-image: url(/images/homepage.jpg);
+    background-size: cover;
+    height: 90%;
     padding: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 .intro{
-    font-size: 50px;
+    font-size: 90px;
     font-weight: 200;
-    padding: 50px;
-    margin-top: 40px;
+    padding-right: 200px;
+    margin-top: 100px;
+    font-family: Brush Script MT, Brush Script Std, cursive	;
+    color: #4CAF50;
 }
 #signUpForm{
     padding: 3rem;
-    background: #fff;
+    background: #bcb7b7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 400px;
-    margin: auto;
+    max-height: 360px;
+    margin: 50px 70px;
 }
 
 #signUpForm input {
@@ -69,11 +76,14 @@ html, body {
 
 #signInForm{
     padding: 3rem;
-    background: #fff;
+    background: #bcb7b7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 400px;
     margin: auto;
+    max-width: 400px;
+    max-height: 300px;
+    margin: 50px 70px;
 }
 
 #signInForm input {
@@ -111,6 +121,7 @@ a:hover{
 }
 
 /* meal-planner page css */
+
 .dropbtn {
     background-color: #E5E3DC;
     padding: 10px;
@@ -128,7 +139,7 @@ a:hover{
   .meals-dropdown {
     position: absolute;
     top: 15px;
-    left: 20px;
+    left: 40px;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -159,7 +170,7 @@ a:hover{
 
 
 .mealPlaner{
-    background-image: url(/images/image2.jpeg);
+    background-image: url(/images/meal_planner_6.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -207,8 +218,8 @@ a:hover{
     width: 75%;
   }
 
-.footer {
+/* .footer {
     background-color: #353302;
     height: 15%;
     text-align: center;
-}
+} */
