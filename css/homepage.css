@@ -135,6 +135,20 @@ a:hover{
   .dropbtn:hover {
     background-color: #657B6D;
   }
+  .signOutBtn{
+    background-color: #E5E3DC;
+    padding: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 7px;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+  }
+
+  .signOutBtn:hover{
+    background-color: #657B6D;
+  }
   
   .meals-dropdown {
     position: absolute;

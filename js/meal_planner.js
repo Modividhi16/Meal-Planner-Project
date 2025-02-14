@@ -106,3 +106,7 @@ window.onclick = function (event) {
       dropdown.classList.remove("show");
   }
 };
+
+function signOut(){
+    window.location.href = "homepage.html";
+}
