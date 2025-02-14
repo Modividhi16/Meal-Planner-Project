@@ -31,34 +31,71 @@ function getMealDropdown(){
     document.getElementById("addMealsForm").classList.toggle("show");
 }
 
-function getValue() {
-  const input = document.querySelector('.input');
-  const inputValue = input.value.trim(); // Trim extra spaces
-  const mealType = document.getElementById("meal_options").value; // Get the selected meal type
+   function getValue() {
+        const input = document.querySelector('.input');
+        const inputValue = input.value.trim(); // Trim extra spaces
+        const mealType = document.getElementById("meal_options").value; // Get selected meal type
+    
+        if (!inputValue) {
+            alert("Please enter a meal name.");
+            return;
+        }
+    
+        if (!mealType || mealType === "mealType") {
+            alert("Please select a meal type.");
+            return;
+        }
+    
+        // Get existing meals from localStorage or initialize an empty object
+        let storedMeals = JSON.parse(localStorage.getItem('meals')) || { breakfast: [], lunch: [], dinner: [] };
+    
+        if (!storedMeals[mealType].includes(inputValue)) {  // Prevent duplicates
+            storedMeals[mealType].push(inputValue);
+            localStorage.setItem('meals', JSON.stringify(storedMeals)); // Save updated meals
+        }
+    
+        // Retrieve the stored meal list for the selected type
+        const mealValues = storedMeals[mealType];
+    
+        // Loop through each day of the week and add the meal to the corresponding dropdown
+        const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+        for (let day of days) {
+            const dropdown = document.getElementById(`${mealType}_${day}`);
+            if (dropdown) {
+                mealValues.forEach(meal => {
+                    const option = document.createElement("option");
+                    option.textContent = meal;
+                    dropdown.appendChild(option);
+                });
+            }
+        }
+    
+        console.log(`Added ${inputValue} to ${mealType}`);
+        input.value = ""; // Clear input field
+        document.getElementById("addMealsForm").reset();
+    
+    }
 
-  if (inputValue && mealType !== "mealType") {
-      // Create a new option element
-      const option = document.createElement("option");
-      option.textContent = inputValue;
-
-      // Loop through each day of the week
+    function loadStoredMeals() {
+      let storedMeals = JSON.parse(localStorage.getItem('meals')) || { breakfast: [], lunch: [], dinner: [] };
+  
       const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-      for (let day of days) {
-          // Find the corresponding dropdown for the selected meal type and day
-          const dropdown = document.getElementById(`${mealType}_${day}`);
-          if (dropdown) {
-              dropdown.appendChild(option.cloneNode(true)); // Add the new meal to each day's dropdown
-          }
-      }
-
-      // Clear the input field and reset the form
-      input.value = '';
-      document.getElementById("addMealsForm").reset();
-  } else {
-      console.warn("No meal entered or invalid selection!");
+      ["breakfast", "lunch", "dinner"].forEach(mealType => {
+          days.forEach(day => {
+              const dropdown = document.getElementById(`${mealType}_${day}`);
+              if (dropdown) {
+                  storedMeals[mealType].forEach(meal => {
+                      const option = document.createElement("option");
+                      option.textContent = meal;
+                      dropdown.appendChild(option);
+                  });
+              }
+          });
+      });
   }
-}
-
+  
+  // Load meals from localStorage when the page loads
+  window.onload = loadStoredMeals;
 
 window.onclick = function (event) {
   const dropdown = document.getElementById("addMealsForm");
@@ -69,9 +106,3 @@ window.onclick = function (event) {
       dropdown.classList.remove("show");
   }
 };
-
-function storeMeal () {
-  const inputValue = document.getElementById("breakfast_monday").value;
-  localStorage.setItem("breakfast_monday", inputValue);
-  console.log(inputValue);
-}

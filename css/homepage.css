@@ -6,13 +6,14 @@
 
 html, body {
     height: 100%;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .header {
     background-color:#58ab5b;
-    height: 10%;
+    /* height: 10%; */
     text-align: center;
-    padding-top: 10px;
+    padding: 5px;
     color: white;
     font-family: Bradley Hand, cursive	;
 }
@@ -20,7 +21,7 @@ html, body {
     /* background-color: #FAFEEF; */
     background-image: url(/images/homepage.jpg);
     background-size: cover;
-    height: 90%;
+    height: 100vh;
     padding: 50px;
     display: flex;
     justify-content: right;
@@ -38,8 +39,8 @@ html, body {
     background: #bcb7b7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 400px;
-    max-height: 360px;
+    width: 400px;
+    height: 360px;
     margin: 50px 70px;
 }
 
@@ -79,10 +80,9 @@ html, body {
     background: #bcb7b7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 400px;
     margin: auto;
-    max-width: 400px;
-    max-height: 300px;
+    width: 400px;
+    height: 300px;
     margin: 50px 70px;
 }
 
@@ -124,7 +124,7 @@ a:hover{
 
 .dropbtn {
     background-color: #E5E3DC;
-    padding: 10px;
+    padding: 7px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 7px;
